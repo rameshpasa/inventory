@@ -1,0 +1,29 @@
+<p>Find me in app/views/products/new.html.erb</p>
+
+
+<h2>Add New Product</h2>
+
+<%= form_for(@product) do |product| %>
+    <div>
+      <%= product.label :ProductName %><br>
+      <%= product.text_field :ProductName %>
+    </div>
+    <div>
+      <%= product.label :ProductType %><br>
+      <%= product.text_field :ProductType %>
+    </div>
+    <div>
+      <%= product.label :Quantity %><br>
+      <%= product.text_field :Quantity %>
+    </div>
+    <div>
+      <%= product.label :CostPerUnit %><br>
+      <%= product.text_field :CostPerUnit %>
+    </div>
+    <div>
+      <%= product.submit %>
+    </div>
+    <div>
+      <%= link_to "Back", products_path %>
+    </div>
+<% end %>

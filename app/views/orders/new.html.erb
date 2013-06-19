@@ -1,0 +1,17 @@
+<h2>Place your order</h2>
+
+<%= form_for(@order) do |f| %>
+    <div>
+        <%= f.label :ProductId %>
+        <%= f.select "ProductName","id", @products.collect {|p| [p.ProductName,p.id]}, {:include_blank => 'None'} %>
+    </div>
+
+    <div>
+      <%= f.label :Quantity %>
+      <%= f.text_field :Quantity %>
+    </div>
+
+    <div>
+      <%= f.submit %>
+    </div>
+<% end %>

@@ -1,0 +1,27 @@
+<p>Find me in app/views/products/index.html.erb</p>
+
+<h1>Show all products</h1>
+<table>
+  <tr>
+    <td>Name</td>
+    <td>type</td>
+    <td>Quantity</td>
+    <td>Cost per unit</td>
+  </tr>
+  <% @products.each do |product| %>
+      <tr>
+        <td><%= product.ProductName %></td>
+        <td><%= product.ProductType %></td>
+        <td><%= product.Quantity %></td>
+        <td><%= product.CostPerUnit %></td>
+      </tr>
+  <% end %>
+  <tr>
+    <td><%= link_to "Add", new_product_path %></td>
+  </tr>
+  <tr>
+    <td>
+      <p id="notice"><%= notice %></p>
+    </td>
+  </tr>
+</table>

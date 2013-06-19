@@ -1,0 +1,20 @@
+<p>Find me in app/views/stores/new.html.erb</p>
+
+<h2>Add New Store</h2>
+
+<%= form_for(@store) do |store| %>
+    <div>
+      <%= store.label :StoreName %><br>
+      <%= store.text_field :StoreName %>
+    </div>
+    <div>
+      <%= store.label :Address %><br>
+      <%= store.text_field :Address %>
+    </div>
+    <div>
+      <%= store.submit %>
+    </div>
+    <div>
+      <%= link_to "Back",stores_path %>
+    </div>
+<% end %>

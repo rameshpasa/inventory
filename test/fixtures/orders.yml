@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Username: MyString
+  ProductId: 1
+  Quantity: 1
+  OrderDate: 2013-06-18 16:23:21
+
+two:
+  Username: MyString
+  ProductId: 1
+  Quantity: 1
+  OrderDate: 2013-06-18 16:23:21

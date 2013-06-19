@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inventory</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<table>
+  <tr class="header"><td>Inventory</td></tr>
+  <tr class="menu"><td><%= link_to "Stores", stores_path %>&nbsp;&nbsp;&nbsp;<%= link_to "Products", products_path %>
+    &nbsp;&nbsp;&nbsp;<%= link_to "Place Order here", new_order_path %></td></tr>
+  <tr><td ><%= yield %></td></tr>
+  <tr><td ></td></tr>
+  <tr class="footer"><td>Copyright.....</td></tr>
+</table>
+</body>
+</html>
