@@ -2,16 +2,39 @@
 
 <%= form_for(@order) do |f| %>
     <div>
-        <%= f.label :ProductId %>
-        <%= f.select "ProductName","id", @products.collect {|p| [p.ProductName,p.id]}, {:include_blank => 'None'} %>
+      <%= f.label :Username %>
+      <%= f.text_field :Username %>
+    </div>
+    <div>
+        <%= f.label :ProductName %>
+        <%= collection_select(:order, :ProductId, @products, :id, :ProductName) %>
+    </div>
+    <div>
+      <%= f.label :Quantity %>
+      <%= f.number_field :Quantity %>
+    </div>
+    <div>
+      <%= f.label :OrderDate %>
+      <%= f.date_select :OrderDate %>
     </div>
 
     <div>
-      <%= f.label :Quantity %>
-      <%= f.text_field :Quantity %>
-    </div>
+      <label>Total Cost : </label>
+      <%= getTotalCost(1,13) %>
 
+    </div>
+    <br>
     <div>
       <%= f.submit %>
     </div>
+
+    <div>
+      <p id="notice"><%= notice %></p>
+    </div>
 <% end %>
+<button id="btn2">Calculate</button>
+
+<button id="btn1" value="button">Test</button>
+
+
+

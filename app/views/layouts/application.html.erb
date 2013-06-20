@@ -8,7 +8,7 @@
 </head>
 <body>
 <table>
-  <tr class="header"><td>Inventory</td></tr>
+  <tr class="header"><td><%= link_to "Inventory", home_index_path%></td></tr>
   <tr class="menu"><td><%= link_to "Stores", stores_path %>&nbsp;&nbsp;&nbsp;<%= link_to "Products", products_path %>
     &nbsp;&nbsp;&nbsp;<%= link_to "Place Order here", new_order_path %></td></tr>
   <tr><td ><%= yield %></td></tr>

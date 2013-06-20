@@ -7,7 +7,7 @@ Inventory::Application.routes.draw do
 
   get "products/new"
 
-  resources :stores, :products, :orders
+  resources :home, :stores, :products, :orders
 
   get "home/index"
 
