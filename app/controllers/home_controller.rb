@@ -3,6 +3,6 @@ class HomeController < ApplicationController
   	test
   end
   def show
-
+  	test222
   end
 end
