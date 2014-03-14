@@ -4,5 +4,6 @@ class HomeController < ApplicationController
   end
   def show
   	test222
+  	test b1
   end
 end
